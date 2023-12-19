@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" class="js_input">
+   <button onclick="addTodo();">Add</button>
+   <div class="js_diplay"></div>
+
+   <script>
+    const todoList = [];
+    display();
+
+    function display(){
+        let displayHTML = '';
+        for(let i=0; i<todoList.length; i++){
+            const todo = todoList[i];
+            const html = `<p>${todo}</p>`;
+            displayHTML += html;
+        }
+        document.querySelector('.js_diplay').innerHTML = displayHTML;
+    }
+    
+
+    const addTodo=()=>{
+        //console.log('hi');
+        const inputEl = document.querySelector('.js_input').value;
+        //console.log(inputEl);
+        todoList.push(inputEl);
+        //console.log(todoList);
+        display();
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <select name = "" id="test">
+            <option value = "Ng">  Nigeria</option> 
+            <option value = "Sp">  Spain</option> 
+            <option value = "CD">  Canada</option> 
+    
+        </select>
+                    <button type="button" name="btn" id="btn" onclick="clckme()"> Submit </button>
+    </form>
+
+    
+</body>
+
+<script>
+            function clckme() {
+                        let test = document.getElementById('test');
+                        test.value = 'CD';
+            }
+</script>
+</html>
